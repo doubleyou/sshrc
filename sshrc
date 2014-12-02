@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 function sshrc() {
     local SSHHOME=${SSHHOME:=~}
-    local files=".sshrc .sshrc.d"
+    local files=".sshrc.d"
     /usr/bin/ssh -t -F $SSHHOME/.sshrc.d/.ssh/config "$@" "
         if [[ -e /etc/motd ]]; then cat /etc/motd; fi
         export SSHHOME=\$(mktemp -d -t .$(whoami).sshrc.XXXX)
