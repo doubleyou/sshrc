@@ -1,0 +1,12 @@
+alias .="cd .."
+alias vi=vim
+
+git() {
+    if [[ $@ == "log" ]] && command -v tig > /dev/null 2>&1 ; then
+        command git log | tig;
+    else
+        command git "$@";
+    fi
+}
+
+alias vim="vim -u $SSHHOME/.sshrc.d/vimrc"
