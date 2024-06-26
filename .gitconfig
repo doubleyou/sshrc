@@ -1,0 +1,2 @@
+# This will be used in place of `~/.gitconfig` on the remote machine, which clobbers entries in `$XDG_CONFIG_HOME/git/config`.
+# To re-enable the remote `~/.gitconfig`, delete this file.
